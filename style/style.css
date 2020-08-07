@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: 'iconCI';
+  src: url("style/iconci.woff2") format("woff2"), url("style/iconci.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  background-color: #f7f7f7; }
+
+header {
+  display: block;
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  justify-content: space-between;
+  height: 50px;
+  background-color: white; }
+  header #logoCI,
+  header #user {
+    display: inline-block;
+    vertical-align: middle; }
+  header #user,
+  header .menu {
+    position: absolute;
+    cursor: pointer;
+    width: 50px;
+    height: 100%;
+    top: 0;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center; }
+    header #user img,
+    header .menu img {
+      height: 32px; }
+  header #user {
+    right: 0; }
+  header .menu {
+    left: 0; }
+  header #logoCI img {
+    height: 32px; }
+  header input {
+    display: none; }
+  header .burger {
+    text-align: center;
+    padding: 1rem; }
+  header label {
+    cursor: pointer;
+    width: 50px;
+    height: 100%;
+    top: 50%;
+    font-family: 'iconCI'; }
+    header label div {
+      width: 1rem;
+      height: 2px;
+      background: #000;
+      position: relative;
+      margin: 0 auto; }
+      header label div:after, header label div:before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 1rem;
+        height: 2px;
+        background: #000; }
+      header label div::before {
+        top: -10px; }
+      header label div:after {
+        top: 10px; }
+  header #animation:checked ~ .side-nav {
+    display: block; }
+  header .side-nav {
+    border: 2px solid black;
+    margin-top: 45px;
+    color: rgba(255, 255, 255, 0.3);
+    height: 100%;
+    width: 2000px;
+    margin-left: -20px;
+    display: none; }
+    header .side-nav .relative-flex {
+      position: relative;
+      top: 100px;
+      display: flex;
+      flex-direction: column; }
+
+.container {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  align-items: center;
+  margin-top: 30px; }
+  .container .titre {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+    height: 150px;
+    width: 700px;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffeb00; }
+    .container .titre p {
+      font-weight: 100;
+      font-size: smaller; }
+  .container #form {
+    width: 700px; }
+    .container #form::before {
+      content: "";
+      display: block;
+      background-image: url("../images/home_abo.jpg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      height: 200px;
+      width: 100%;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px; }
+    .container #form .section {
+      text-transform: uppercase;
+      padding-left: 7px;
+      font-weight: 500; }
+    .container #form .label {
+      margin-top: 15px; }
+    .container #form .diva .padd {
+      width: 670px;
+      padding: 15px;
+      font-size: medium;
+      color: #575757;
+      font-weight: lighter;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid;
+      outline: none; }
+      .container #form .diva .padd::placeholder {
+        color: transparent; }
+      .container #form .diva .padd:focus {
+        border-bottom: transparent; }
+        .container #form .diva .padd:focus::placeholder {
+          color: grey; }
+      .container #form .diva .padd:focus ~ .bar {
+        visibility: visible; }
+        .container #form .diva .padd:focus ~ .bar::after {
+          width: 700px;
+          left: 22.5%; }
+      .container #form .diva .padd:focus ~ .place {
+        color: orange;
+        font-size: small;
+        top: -55px;
+        transition: 0.35s top ease; }
+    .container #form .diva .bar {
+      visibility: hidden; }
+      .container #form .diva .bar:after {
+        content: "";
+        height: 0.125rem;
+        width: 0;
+        left: 50%;
+        position: absolute;
+        background: #ff7d24;
+        -webkit-transition: left 0.35s ease, width 0.35s ease;
+        transition: left 0.28s ease, width 0.28s ease; }
+    .container #form .diva .place {
+      position: relative;
+      top: -25px;
+      color: #959595c9;
+      padding: 15px; }
+    .container #form .diva .spe {
+      top: -255px; }
+    .container #form .margi {
+      margin-top: 40px; }
+    .container #form #inputs_bloc1 {
+      display: flex;
+      justify-content: space-between;
+      width: 700px;
+      flex-direction: column;
+      margin-top: 15px;
+      height: 270px; }
+    .container #form #inputs_bloc2 {
+      display: flex;
+      justify-content: space-between;
+      width: 700px;
+      flex-direction: column;
+      margin-top: 15px;
+      height: 200px; }
+    .container #form .trois #inputs_bloc3 {
+      width: 700px; }
+      .container #form .trois #inputs_bloc3 .mini {
+        margin-top: 30px; }
+      .container #form .trois #inputs_bloc3 #change {
+        display: flex;
+        justify-content: center; }
+      .container #form .trois #inputs_bloc3 .check,
+      .container #form .trois #inputs_bloc3 .check2 {
+        display: block; }
+        .container #form .trois #inputs_bloc3 .check .inp,
+        .container #form .trois #inputs_bloc3 .check2 .inp {
+          margin-top: 10px; }
+      .container #form .trois #inputs_bloc3 .check2 {
+        margin-left: 60px; }
+        .container #form .trois #inputs_bloc3 .check2 .moreInfo {
+          display: block;
+          visibility: hidden;
+          width: 260px;
+          transform: translate(160px, -60px);
+          border: 1px solid;
+          padding: 10px;
+          background: #8080802e; }
+        .container #form .trois #inputs_bloc3 .check2:hover .moreInfo {
+          visibility: visible; }
+        .container #form .trois #inputs_bloc3 .check2 #info::after {
+          content: "?";
+          cursor: pointer;
+          display: inline-block;
+          background: #eee;
+          width: 30px;
+          height: 30px;
+          border-radius: 100%;
+          margin-left: 10px;
+          text-align: center;
+          font-weight: 500;
+          line-height: 1.7;
+          margin-top: -1rem; }
+        .container #form .trois #inputs_bloc3 .check2 #info:hover .moreInfo {
+          visibility: visible; }
+      .container #form .trois #inputs_bloc3 .message {
+        display: flex;
+        flex-direction: column; }
+        .container #form .trois #inputs_bloc3 .message textarea {
+          padding: 10px;
+          font-size: larger;
+          font-family: "Roboto", sans-serif;
+          font-weight: 300;
+          outline: none;
+          background: #f7f7f7;
+          border-top: none;
+          border-left: none;
+          border-right: none;
+          border-bottom: 1px solid;
+          outline: none;
+          width: 679px; }
+          .container #form .trois #inputs_bloc3 .message textarea:focus {
+            border-bottom: transparent; }
+    .container #form .trois input[type="radio"] {
+      -webkit-appearance: none;
+      border: 1px solid;
+      padding: 0.5em; }
+      .container #form .trois input[type="radio"]:checked::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 0.5rem;
+        height: 2.5px;
+        background: orange;
+        transform: rotate(-130deg);
+        margin-left: -6px;
+        margin-top: 0px; }
+      .container #form .trois input[type="radio"]:checked::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 1.2rem;
+        height: 2.5px;
+        background: orange;
+        transform: rotate(-415deg);
+        margin-left: -4px;
+        margin-top: -3px; }
+    .container #form .trois #envoyer {
+      width: 50%;
+      padding: 15px;
+      font-size: large;
+      background: yellow;
+      font-weight: bold;
+      border: none; }
+    .container #form .trois #accepter {
+      text-align: justify; }
+    .container #form .trois #accepter,
+    .container #form .trois #envoyer {
+      margin-top: 15px;
+      width: 400px;
+      margin: 50px;
+      transform: translateX(25%); }
+    .container #form .trois #accept b {
+      font-weight: bolder; }

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page abo test</title>
+    <link rel="stylesheet" href="style/style.css">
+    
+</head>
+<body>
+<header>
+    <input id="animation" type="checkbox">
+    <nav class="burger">
+        <label class='menu' for="animation"><div></div></label>
+        <a id="logoCI" href="#"><img src="images/logoCI.svg" alt=""></a>
+        <a id="user" href="#"><img src="images/user-solid.svg" alt=""></a>
+    </nav>
+    <div class="side-nav">
+        <div class="relative-flex">
+            <a href="#">LOREM</a>
+            <a href="#">LOREM</a>
+            <a href="#">LOREM</a>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <div class="titre">
+    <h1>Abonnement institutions : </h1>
+    <p>administration, entreprises, associations...</p>
+    </div>
+    <form action="" method="POST" id="form">
+        <div class="bloc un">
+            <div class="label">
+                <img src="images/logo_courrier_resized.png" alt="logo">
+                <label class="section">Vos informations</label>
+            </div>
+            <div id="inputs_bloc1">
+                <div class="diva">
+                    <input class="padd" type="text" name="prenom" placeholder="inscrivez votre prénom" required>
+                    <div class="bar"></div>
+                    <label class="place">Prénom</label>
+                </div>
+                <div class="diva">
+                    <input class="padd" type="text" name="nom" placeholder="inscrivez votre nom" required>
+                    <div class="bar"></div>
+                    <label class="place">Nom</label>
+                </div>
+               <div class="diva">
+                <input class="padd" type="text" name="tel" placeholder="ici votre téléphone" required>
+                <div class="bar"></div>
+                <label class="place">Téléphone</label>
+            </div>
+                <div class="diva">
+                    <input class="padd" type="email" name="email" placeholder="ici votre email" required>
+                    <div class="bar"></div>
+                    <label class="place">Email</label>
+                </div>
+            </div>
+        </div>
+        <div class="bloc deux">
+            <div class="label margi">
+                <img src="images/logo_courrier_resized.png" alt="logo">
+                <label class="section">Votre institution</label>
+            </div>
+            <div id="inputs_bloc2">
+                <div class="diva">
+                    <input class="padd" type="text" name="organisme" placeholder="inscrire votre type d'organisme" required>
+                    <div class="bar"></div>
+                    <label class="place">Votre type d'organisme (entreprise, mairie, bibliothèque...)</label>
+                </div>
+                <div class="diva">
+                    <input class="padd" required type="text" name="raison_sociale" placeholder="inscrire votre raison sociale">
+                    <div class="bar"></div>
+                    <label class="place">Raison sociale</label>
+                </div>
+                <div class="diva">
+                    <input class="padd" type="text" name="pays" placeholder="inscrire le pays" required>
+                    <div class="bar"></div>
+                    <label class="place">Pays</label>
+                </div>
+        </div>
+        <div class="bloc trois">
+            <div class="label margi">
+                <img src="images/logo_courrier_resized.png" alt="logo">
+                <label class="section">L'abonnement</label>
+            </div>
+            <div id="inputs_bloc3">
+                <div id="change">
+                    <div class=" mini check">
+                        <label>Choix de l'abonnement</label>
+                            <div>
+                                
+                                <input class="inp" type="radio" name="checked">
+                                <label for="papier">papier</label>
+                            </div>
+                            <div>
+                                
+                                <input class="inp" type="radio" name="checked">
+                                <label for="num">numérique</label>
+                            </div>
+                            <div>
+                                
+                                <input class="inp" type="radio" name="checked">
+                                <label for="num_papier">numérique + papier </label>
+                            </div>
+                    </div>
+                    <div class=" mini check2">
+                        <label id="info">Type d'accès
+                        </label>
+                        <div>
+                            <input class="inp" type="radio" name="type">
+                            <label for="collectif">collectif</label>
+                        </div>
+                        <div>
+                            <input class="inp" type="radio" name="type">
+                            <label for="indi">individuel</label>
+                        </div>
+                        <span class="moreInfo">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa ab molestiae autem ut! Illum culpa nostrum unde aut voluptates est facere, excepturi sit voluptatem aliquam rerum dicta tenetur sequi! Libero.
+                        </span>
+                    </div>
+                </div>
+                <div class="mini check3">
+                    <label for="cmb">Nombre d'accès</label>
+                    <input type="number" name="cmb" value="1" required>
+                </div>
+                <div class="mini message diva">
+                    <textarea name="msg" cols="30" rows="10"  id="urMsg" class="padd"></textarea>
+                    <div class="bar"></div>
+                    <label class="place spe">Votre message</label>
+                </div>
+            </div>
+            <div id="accepter">
+                <input type="radio" name="checked" class="inp" required>
+                <label id="accept" ><b>je reconnais avoir pris connaissance des conditions générales</b> lorem ipsum dolor sit amet consectetur omnis consectetur ducimus maiores assumenda at expedita reiciendis. Possimus tempora libero beatae illum reprehenderit perspiciatis temporibus commodi.</label>
+            </div>
+            <input id="envoyer" type="submit" value="Envoyer la demande">
+        </div>
+    </form>
+</div>
+
+
+</body>
+</html>
